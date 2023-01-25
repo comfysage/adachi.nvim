@@ -8,6 +8,10 @@
 " Supporting code -------------------------------------------------------------
 " Initialisation: {{{
 
+if has('nvim')
+  lua require 'adachi'.load {}
+endif
+
 if version > 580
   hi clear
   if exists("syntax_on")
