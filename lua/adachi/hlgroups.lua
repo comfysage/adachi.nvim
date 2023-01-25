@@ -35,6 +35,7 @@ end
 ---@return HLGroups
 function M.setup(theme, config)
 
+  ---@type AdachiConfig
   config = vim.tbl_extend("force", _G.adachi_config, config or {})
 
   local hlGroups = {
@@ -402,6 +403,13 @@ function M.setup(theme, config)
 
   if config.override_terminal then
     setup_terminal_colors(theme)
+  end
+
+  for hl, override in pairs(config.overrides) do
+    if hlGroups[hl] and not vim.tbl_isempty(override) then
+      hlGroups[hl].link = nil
+    end
+    hlGroups[hl] = vim.tbl_deep_extend("force", hlGroups[hl] or {}, override)
   end
 
   return hlGroups

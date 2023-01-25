@@ -9,6 +9,8 @@ local adachi = {}
 ---@field keyword EmphasisGroup
 ---@field transparent_background boolean
 ---@field inverse inverseField
+---@field overrides HLGroups
+
 ---@class EmphasisGroup
 ---@field bold boolean
 ---@field italic boolean
@@ -23,6 +25,7 @@ adachi.default_config = {
     keyword = { },
     transparent_background = false,
     inverse = { },
+    overrides = { },
 }
 
 ---@type AdachiConfig
