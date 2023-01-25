@@ -401,6 +401,11 @@ function M.setup(theme, config)
     hlGroups['@variable.builtin'] = { link = "TSVariableBuiltin" }
   end
 
+  local plugin_groups = require 'adachi.plugins'.plugins
+  for _, p_name in ipairs(config.plugins) do
+    hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_groups[p_name] or {})
+  end
+
   if config.override_terminal then
     setup_terminal_colors(theme)
   end

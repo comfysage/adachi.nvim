@@ -10,6 +10,7 @@ local adachi = {}
 ---@field transparent_background boolean
 ---@field inverse inverseField
 ---@field overrides HLGroups
+---@field plugins string[]
 
 ---@class EmphasisGroup
 ---@field bold boolean
@@ -26,6 +27,7 @@ adachi.default_config = {
     transparent_background = false,
     inverse = { },
     overrides = { },
+    plugins = { },
 }
 
 ---@type AdachiConfig
