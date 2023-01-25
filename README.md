@@ -47,6 +47,7 @@ require 'adachi'.setup {
 - Support for Treesitter highlighting.
 - Support for transparent background.
 - Supported plugins: [Airline][], [GitGutter][], [NERDTree][], [Telescope][].
+
   [airline]: https://github.com/bling/vim-airline
   [gitgutter]: https://github.com/airblade/vim-gitgutter
   [nerdtree]: https://github.com/scrooloose/nerdtree
