@@ -18,10 +18,10 @@ Plug 'crispybaccoon/adachi.nvim'
 
 ```lua
 require 'adachi'.setup {
-    theme = "default",
+    theme = "default", -- 'default' | 'light'
     override_terminal = true,
-    contrast_dark = 'medium',
-    contrast_light = 'medium',
+    contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
+    contrast_light = 'medium', -- 'hard'|'medium'|'soft'
     comment = { italic = false, bold = false }, -- use { italic = true } for italic comments
     keyword = { italic = false, bold = false },
     transparent_background = false,
