@@ -5,9 +5,13 @@ local adachi = {}
 ---@field override_terminal boolean
 ---@field contrast_dark 'hard'|'medium'|'soft'
 ---@field contrast_light 'hard'|'medium'|'soft'
----@field bold boolean
+---@field comment EmphasisGroup
+---@field keyword EmphasisGroup
 ---@field transparent_background boolean
 ---@field inverse inverseField
+---@class EmphasisGroup
+---@field bold boolean
+---@field italic boolean
 
 ---@type AdachiConfig
 adachi.default_config = {
@@ -15,7 +19,8 @@ adachi.default_config = {
     override_terminal = true,
     contrast_dark = 'medium',
     contrast_light = 'medium',
-    bold = false,
+    comment = { },
+    keyword = { },
     transparent_background = false,
     inverse = { },
 }

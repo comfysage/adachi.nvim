@@ -28,8 +28,10 @@ local M = {}
 ---@field color_column Color
 ---@field vert_split Color
 ---@field inverse inverseField
----@field bold boolean
+---@field bold specialField
+---@field italic specialField
 
+---@alias specialField { ['comment']: boolean, ['keyword']: boolean }
 ---@alias inverseField { ['tabline']: boolean, ['signs']: boolean, ['search']: boolean }
 
 ---@param gb AdachiColors
@@ -115,7 +117,22 @@ function M.setup(gb, config)
 
   theme.inverse = vim.tbl_extend('force', theme.inverse, config.inverse)
 
-  theme.bold = config.bold or false
+  theme.bold = {
+    comment = false,
+    keyword = false,
+  }
+
+  theme.italic = {
+    comment = false,
+    keyword = false,
+  }
+
+  -- override theme
+  for _, m in ipairs({ 'bold', 'italic' }) do
+    for name in pairs(theme[m]) do
+      theme[m][name] = config[name][m] or theme[m][name]
+    end
+  end
 
   return theme
 end

@@ -51,19 +51,19 @@ function M.setup(theme, config)
     AdachiBg4 = { theme.bg4 },
 
     AdachiRed = { theme.red },
-    AdachiRedBold = { theme.red, theme.none, bold = theme.bold },
+    AdachiRedBold = { theme.red, theme.none, bold = true },
     AdachiGreen = { theme.green },
-    AdachiGreenBold = { theme.green, theme.none, bold = theme.bold },
+    AdachiGreenBold = { theme.green, theme.none, bold = true },
     AdachiYellow = { theme.yellow },
-    AdachiYellowBold = { theme.yellow, theme.none, bold = theme.bold },
+    AdachiYellowBold = { theme.yellow, theme.none, bold = true },
     AdachiBlue = { theme.blue },
-    AdachiBlueBold = { theme.blue, theme.none, bold = theme.bold },
+    AdachiBlueBold = { theme.blue, theme.none, bold = true },
     AdachiPurple = { theme.purple },
-    AdachiPurpleBold = { theme.purple, theme.none, bold = theme.bold },
+    AdachiPurpleBold = { theme.purple, theme.none, bold = true },
     AdachiAqua = { theme.aqua },
-    AdachiAquaBold = { theme.aqua, theme.none, bold = theme.bold },
+    AdachiAquaBold = { theme.aqua, theme.none, bold = true },
     AdachiOrange = { theme.orange },
-    AdachiOrangeBold = { theme.orange, theme.none, bold = theme.bold },
+    AdachiOrangeBold = { theme.orange, theme.none, bold = true },
 
     AdachiRedSign = { theme.red, theme.sign_column, reverse = theme.inverse.signs },
     AdachiGreenSign = { theme.green, theme.sign_column, reverse = theme.inverse.signs },
@@ -158,7 +158,7 @@ function M.setup(theme, config)
     lCursor = { link = "Cursor" },
 
     Special = { theme.orange },
-    Comment = { theme.comment },
+    Comment = { theme.comment, bold = theme.bold.comment, italic = theme.italic.comment },
     Todo = { theme.purple, theme.bg1 },
     Error = { theme.red },
 
@@ -176,7 +176,7 @@ function M.setup(theme, config)
     -- sizeof, "+", "*", etc.
     Operator = { link = "Normal" },
     -- Any other keyword
-    Keyword = { link = "AdachiRed" },
+    Keyword = { link = "AdachiRed", bold = theme.bold.keyword, italic = theme.italic.keyword },
 
     Delimiter = { link = "AdachiAqua" },
     MatchParen = { link = "AdachiYellow" },
