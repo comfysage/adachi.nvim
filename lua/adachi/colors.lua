@@ -42,12 +42,12 @@ _G.adachi_colors = {
     ['aqua'] = { "#A1CEB5", 72 },
   },
   bright = {
-    ['red'] = { "#F0B4B1", 124 },
+    ['red'] = { "#F38681", 124 },
     ['green'] = { "#AFDB81", 106 },
     ['yellow'] = { "#FAD994", 172 },
-    ['purple'] = { "#F0BBC6", 132 },
+    ['purple'] = { "#C8B0DA", 132 },
     ['orange'] = { "#ffb66f", 166 },
-    ['blue'] = { "#B1CA8B", 106 },
+    ['blue'] = { "#94AAD5", 106 }, -- A1A6CE
     ['aqua'] = { "#A1CEB5", 72 },
   },
   koi = {
