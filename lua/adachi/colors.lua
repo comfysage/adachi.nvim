@@ -36,10 +36,10 @@ _G.adachi_colors = {
     ['red'] = { "#e39691", 124 },
     ['green'] = { "#b2ca67", 106 },
     ['yellow'] = { "#DBDA81", 172 },
-    ['purple'] = { "#EBB7C1", 132 },
     ['orange'] = { "#ffb66f", 166 },
     ['blue'] = { "#B1CA8B", 106 },
     ['aqua'] = { "#A1CEB5", 72 },
+    ['purple'] = { "#8E7FA3", 132 }, -- C9A0CA
   },
   bright = {
     ['red'] = { "#F38681", 124 },
