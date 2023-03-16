@@ -185,7 +185,7 @@ function M.setup(theme, config)
     -- Variable name
     Identifier = { link = "AdachiBlue" },
     -- Function name
-    Function = { link = "AdachiGreenBold" },
+    Function = { link = "AdachiBlue" },
 
     -- Generic preprocessor
     PreProc = { link = "AdachiAqua" },
