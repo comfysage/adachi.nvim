@@ -148,7 +148,7 @@ function M.setup(theme, config)
     -- Line used for closed folds
     Folded = { theme.bg4, theme.bg0 },
     -- Column where folds are displayed
-    FoldColumn = { theme.bg3, theme.bg1 },
+    FoldColumn = { theme.comment, theme.bg1 },
     -- Character under cursor
     Cursor = { theme.none, theme.selected, reverse = not theme.inverse.search },
     -- Visual mode cursor, selection
