@@ -37,6 +37,7 @@ local M = {}
 ---@field inverse inverseField
 ---@field bold specialField
 ---@field italic specialField
+---@field underline specialField
 
 ---@alias specialField { ['general']: boolean, ['comment']: boolean, ['keyword']: boolean }
 ---@alias inverseField { ['tabline']: boolean, ['signs']: boolean, ['search']: boolean }
@@ -140,6 +141,12 @@ function M.setup(gb, config)
   }
 
   theme.italic = {
+    general = false,
+    comment = false,
+    keyword = false,
+  }
+
+  theme.underline = {
     general = false,
     comment = false,
     keyword = false,
