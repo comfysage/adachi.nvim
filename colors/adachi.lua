@@ -1,0 +1,1 @@
+require 'adachi'.load {}
