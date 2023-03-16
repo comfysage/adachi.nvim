@@ -256,6 +256,7 @@ function M.setup(theme, config)
     TSNumber             = { link = "AdachiPurple" },
     TSParameter          = { link = "AdachiAqua" },
     TSOperator           = { link = "Operator" },
+    TSParameter          = { link = "AdachiFg4" },
     TSParameterReference = { link = "AdachiFg2" },
     TSProperty           = { link = "AdachiAqua" },
     TSPunctBracket       = { link = "Delimiter" },
