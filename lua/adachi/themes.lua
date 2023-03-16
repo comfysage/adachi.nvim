@@ -20,6 +20,13 @@ local M = {}
 ---@field purple Color
 ---@field aqua Color
 ---@field orange Color
+---@field red_accent Color
+---@field green_accent Color
+---@field yellow_accent Color
+---@field blue_accent Color
+---@field purple_accent Color
+---@field aqua_accent Color
+---@field orange_accent Color
 ---@field none Color
 ---@field comment Color
 ---@field selected Color
@@ -77,9 +84,11 @@ function M.setup(gb, config)
   theme.fg4 = _fg['4']
 
   local _bright = gb.bright
+  local _accent = gb.neutral
 
   if config.theme == 'light' then
     _bright = gb.dark
+    _accent = gb.neutral
   end
 
   theme.red    = _bright['red']
@@ -89,6 +98,13 @@ function M.setup(gb, config)
   theme.purple = _bright['purple']
   theme.aqua   = _bright['aqua']
   theme.orange = _bright['orange']
+  theme.red_accent    = _accent['red']
+  theme.green_accent  = _accent['green']
+  theme.yellow_accent = _accent['yellow']
+  theme.blue_accent   = _accent['blue']
+  theme.purple_accent = _accent['purple']
+  theme.aqua_accent   = _accent['aqua']
+  theme.orange_accent = _accent['orange']
 
   theme.none = { 'NONE', nil }
 
