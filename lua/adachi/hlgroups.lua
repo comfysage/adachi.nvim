@@ -222,12 +222,12 @@ function M.setup(theme, config)
     Typedef = { link = "AdachiYellow" },
 
     -- Treesitter
-    TSStrong             = { theme.none, theme.none, --[[ theme.bold ]] },
-    TSEmphasis           = { theme.none, theme.none, --[[ theme.italic ]] },
-    TSUnderline          = { theme.none, theme.none, --[[ theme.underline ]] },
-    TSNote               = { theme.blue, theme.bg0, --[[ theme.bold ]] },
-    TSWarning            = { theme.yellow, theme.bg0, --[[ theme.bold ]] },
-    TSDanger             = { theme.red, theme.bg0, --[[ theme.bold ]] },
+    TSStrong    = { theme.none, theme.none, bold = theme.bold.general },
+    TSEmphasis  = { theme.none, theme.none, italic = theme.italic.general },
+    TSUnderline = { theme.none, theme.none, underline = theme.underline.general },
+    TSNote      = { theme.blue, theme.bg0, bold = theme.bold.general },
+    TSWarning   = { theme.yellow, theme.bg0, bold = theme.bold.general },
+    TSDanger    = { theme.red, theme.bg0, bold = theme.bold.general },
 
     TSAnnotation         = { link = "AdachiPurple" },
     TSAttribute          = { link = "AdachiPurple" },
