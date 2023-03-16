@@ -93,7 +93,7 @@ function M.setup(theme, config)
     -- Tab pages line filler
     TabLineFill = { theme.bg4, theme.bg0 },
     -- Active tab page label
-    TabLineSel = { theme.red, theme.bg0, reverse = theme.inverse.tabline },
+    TabLineSel = { theme.inverse.tabline and theme.bg0 or theme.red, theme.inverse.tabline and theme.red or theme.bg0 },
     -- Not active tab page label
     TabLine = { link = "TabLineFill" },
 
