@@ -401,9 +401,18 @@ function M.setup(theme, config)
     hlGroups['@variable.builtin'] = { link = "TSVariableBuiltin" }
   end
 
-  local plugin_groups = require 'adachi.plugins'.plugins
-  for _, p_name in ipairs(config.plugins) do
-    hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_groups[p_name] or {})
+  if config.plugins then
+    local plugin_groups = require 'adachi.plugins'.plugins
+    if type(config.plugins) == "boolean" then
+      for _, p_name in ipairs(plugin_groups) do
+        hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_groups[p_name] or {})
+      end
+    else
+      ---@diagnostic disable-next-line: param-type-mismatch
+      for _, p_name in ipairs(config.plugins) do
+        hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_groups[p_name] or {})
+      end
+    end
   end
 
   local lang_higroups = require 'adachi.hl'.higroups(theme)
