@@ -258,7 +258,7 @@ function M.setup(theme, config)
     TSOperator           = { link = "Operator" },
     TSParameter          = { link = "AdachiFg4" },
     TSParameterReference = { link = "AdachiFg2" },
-    TSProperty           = { link = "AdachiAqua" },
+    TSProperty           = { link = "AdachiFg3" },
     TSPunctBracket       = { link = "Delimiter" },
     TSPunctDelimiter     = { link = "Delimiter" },
     TSPunctSpecial       = { link = "Special" },
