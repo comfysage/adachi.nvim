@@ -406,6 +406,11 @@ function M.setup(theme, config)
     hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_groups[p_name] or {})
   end
 
+  local lang_higroups = require 'adachi.hl'.higroups(theme)
+  for l_name in pairs(lang_higroups) do
+    hlGroups = vim.tbl_deep_extend('force', hlGroups, lang_higroups[l_name])
+  end
+
   if config.override_terminal then
     setup_terminal_colors(theme)
   end
