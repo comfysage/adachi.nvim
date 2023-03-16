@@ -38,7 +38,7 @@ local M = {}
 ---@field bold specialField
 ---@field italic specialField
 
----@alias specialField { ['comment']: boolean, ['keyword']: boolean }
+---@alias specialField { ['general']: boolean, ['comment']: boolean, ['keyword']: boolean }
 ---@alias inverseField { ['tabline']: boolean, ['signs']: boolean, ['search']: boolean }
 
 ---@param gb AdachiColors
@@ -134,11 +134,13 @@ function M.setup(gb, config)
   theme.inverse = vim.tbl_extend('force', theme.inverse, config.inverse)
 
   theme.bold = {
+    general = false,
     comment = false,
     keyword = false,
   }
 
   theme.italic = {
+    general = false,
     comment = false,
     keyword = false,
   }
