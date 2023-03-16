@@ -115,8 +115,8 @@ function M.setup(theme, config)
     IncSearch = { theme.orange, theme.inverse.search and theme.bg0 or theme.none, reverse = theme.inverse.search },
 
     Underlined = { theme.blue, theme.none, underline = true },
-    StatusLine = { theme.bg2, theme.fg1 },
-    StatuslineNC = { theme.bg1, theme.fg4 },
+    StatusLine = { theme.fg1, theme.bg1 },
+    StatuslineNC = { theme.fg2, theme.bg1 },
 
     -- The column separating vertically split windows
     VertSplit = { theme.bg3, theme.vert_split },
