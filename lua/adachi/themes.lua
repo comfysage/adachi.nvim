@@ -38,6 +38,8 @@ local M = {}
 ---@field bold specialField
 ---@field italic specialField
 ---@field underline specialField
+--
+---@field context specialField
 
 ---@alias specialField { ['general']: boolean, ['comment']: boolean, ['keyword']: boolean }
 ---@alias inverseField { ['tabline']: boolean, ['signs']: boolean, ['search']: boolean }
@@ -127,6 +129,9 @@ function M.setup(gb, config)
 
   theme.comment = theme.bg3
   theme.selected = theme.yellow
+
+  -- Syntax Items
+  theme.context = theme.purple_accent
 
   -- Emphasis
 
