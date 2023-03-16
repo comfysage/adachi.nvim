@@ -130,7 +130,7 @@ function M.setup(gb, config)
 
   -- Emphasis
 
-  theme.inverse = { tabline = false, signs = false }
+  theme.inverse = { tabline = false, signs = false, search = false }
 
   theme.inverse = vim.tbl_extend('force', theme.inverse, config.inverse)
 
