@@ -424,7 +424,7 @@ function M.setup(theme, config)
     setup_terminal_colors(theme)
   end
 
-  for hl, override in pairs(config.overrides) do
+  for hl, override in pairs(config.overrides or {}) do
     if hlGroups[hl] and not vim.tbl_isempty(override) then
       hlGroups[hl].link = nil
     end
