@@ -15,6 +15,7 @@ local adachi = {}
 ---@class EmphasisGroup
 ---@field bold boolean
 ---@field italic boolean
+---@field underline boolean
 
 ---@type AdachiConfig
 adachi.default_config = {
