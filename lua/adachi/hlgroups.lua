@@ -111,8 +111,8 @@ function M.setup(theme, config)
     Visual = { theme.none, theme.bg3 },
     VisualNOS = { link = "Visual" },
 
-    Search = { theme.selected, theme.bg0, reverse = theme.inverse.search },
-    IncSearch = { theme.orange, theme.bg0, reverse = theme.inverse.search },
+    Search = { theme.selected, theme.inverse.search and theme.bg0 or theme.none, reverse = theme.inverse.search },
+    IncSearch = { theme.orange, theme.inverse.search and theme.bg0 or theme.none, reverse = theme.inverse.search },
 
     Underlined = { theme.blue, theme.none, underline = true },
     StatusLine = { theme.bg2, theme.fg1 },
