@@ -201,7 +201,7 @@ function M.setup(theme, config)
     -- Generic constant
     Constant = { link = "AdachiPurple" },
     -- Character constant: 'c', '/n'
-    Character = { link = "AdachiPurple" },
+    Character = { link = "AdachiAqua" },
     -- String constant: "this is a string"
     String = { theme.green },
 
@@ -232,7 +232,7 @@ function M.setup(theme, config)
     TSAnnotation         = { link = "AdachiPurple" },
     TSAttribute          = { link = "AdachiPurple" },
     TSBoolean            = { link = "AdachiPurple" },
-    TSCharacter          = { link = "AdachiAqua" },
+    TSCharacter          = { link = "Character" },
     TSComment            = { link = "Comment" },
     TSConditional        = { link = "AdachiRed" },
     TSConstBuiltin       = { link = "AdachiBlue" },
