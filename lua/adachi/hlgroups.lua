@@ -240,7 +240,7 @@ function M.setup(theme, config)
     TSConstant           = { link = "AdachiPurple" },
     TSConstructor        = { link = "AdachiGreen" },
     TSException          = { link = "AdachiRed" },
-    TSField              = { link = "AdachiAqua" },
+    TSField              = { link = "AdachiOrange" },
     TSFloat              = { link = "AdachiPurple" },
     TSFuncBuiltin        = { link = "AdachiGreen" },
     TSFuncMacro          = { link = "AdachiGreen" },
