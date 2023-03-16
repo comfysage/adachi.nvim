@@ -160,7 +160,7 @@ function M.setup(gb, config)
   -- override theme
   for _, m in ipairs({ 'bold', 'italic' }) do
     for name in pairs(theme[m]) do
-      theme[m][name] = config[name][m] or theme[m][name]
+      theme[m][name] = config[name] and config[name][m] or theme[m][name]
     end
   end
 
