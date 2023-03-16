@@ -404,8 +404,8 @@ function M.setup(theme, config)
   if config.plugins then
     local plugin_groups = require 'adachi.plugins'.plugins
     if type(config.plugins) == "boolean" then
-      for _, p_name in ipairs(plugin_groups) do
-        hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_groups[p_name] or {})
+      for _, plugin_hl in pairs(plugin_groups) do
+        hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_hl or {})
       end
     else
       ---@diagnostic disable-next-line: param-type-mismatch
