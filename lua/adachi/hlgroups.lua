@@ -217,7 +217,7 @@ function M.setup(theme, config)
     -- static, register, volatile, etc
     StorageClass = { link = "AdachiOrange" },
     -- struct, union, enum, etc.
-    Structure = { link = "AdachiAqua" },
+    Structure = { link = "AdachiFg3" },
     -- typedef
     Typedef = { link = "AdachiYellow" },
 
