@@ -82,7 +82,7 @@ function M.setup(theme, config)
     AdachiAquaDark = { theme.aqua, theme.gb.dark['aqua'] },
     AdachiOrangeDark = { theme.orange, theme.gb.dark['orange'] },
 
-    Normal = { theme.fg1, theme.bg0 },
+    Normal = { theme.fg0, theme.bg0 },
     -- Screen line that the cursor is
     CursorLine = { theme.none, theme.bg1 },
     -- Line number of CursorLine
