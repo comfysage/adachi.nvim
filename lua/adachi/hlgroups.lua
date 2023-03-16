@@ -175,7 +175,7 @@ function M.setup(theme, config)
     -- try, catch, throw
     Exception = { link = "AdachiRed" },
     -- sizeof, "+", "*", etc.
-    Operator = { link = "Normal" },
+    Operator = { link = "AdachiOrange" },
     -- Any other keyword
     Keyword = { link = "AdachiRed", bold = theme.bold.keyword, italic = theme.italic.keyword },
 
@@ -254,8 +254,8 @@ function M.setup(theme, config)
     TSNamespace          = { link = "AdachiFg4" },
     TSNone               = { link = "Normal" },
     TSNumber             = { link = "AdachiPurple" },
-    TSOperator           = { link = "AdachiOrange" },
     TSParameter          = { link = "AdachiAqua" },
+    TSOperator           = { link = "Operator" },
     TSParameterReference = { link = "AdachiFg2" },
     TSProperty           = { link = "AdachiAqua" },
     TSPunctBracket       = { link = "Delimiter" },
