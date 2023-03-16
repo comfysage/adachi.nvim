@@ -399,6 +399,13 @@ function M.setup(theme, config)
     hlGroups['@uri'] = { link = "TSURI" }
     hlGroups['@variable'] = { link = "TSVariable" }
     hlGroups['@variable.builtin'] = { link = "TSVariableBuiltin" }
+
+    local captures = require 'adachi.treesitter'.captures(theme)
+    for l_name, higroups in pairs(captures) do
+      for capture_name, higroup in pairs(higroups) do
+        hlGroups[capture_name .. '.' .. l_name] = higroup
+      end
+    end
   end
 
   if config.plugins then
