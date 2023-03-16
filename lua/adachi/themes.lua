@@ -94,7 +94,7 @@ function M.setup(gb, config)
   theme.red    = _bright['red']
   theme.green  = _bright['green']
   theme.yellow = _bright['yellow']
-  theme.blue   = gb.neutral['aqua']
+  theme.blue   = _bright['blue']
   theme.purple = _bright['purple']
   theme.aqua   = _bright['aqua']
   theme.orange = _bright['orange']
