@@ -182,7 +182,7 @@ function M.setup(theme, config)
     MatchParen = { link = "AdachiYellow" },
 
     -- Variable name
-    Identifier = { link = "AdachiBlue" },
+    Identifier = { link = "AdachiFg1" },
     -- Function name
     Function = { link = "AdachiBlue" },
 
