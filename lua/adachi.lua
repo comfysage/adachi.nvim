@@ -9,6 +9,7 @@ local adachi = {}
 ---@field comment EmphasisGroup
 ---@field keyword EmphasisGroup
 ---@field transparent_background boolean
+---@field cursorline_style { soft: boolean, contrast_currentline: boolean }
 ---@field inverse inverseField
 ---@field overrides HLGroups
 ---@field plugins string[]|boolean
@@ -28,6 +29,7 @@ adachi.default_config = {
     comment = { },
     keyword = { },
     transparent_background = false,
+    cursorline_style = { soft = false, contrast_currentline = false },
     inverse = { },
     overrides = { },
     plugins = true,

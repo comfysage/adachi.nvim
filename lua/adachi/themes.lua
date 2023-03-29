@@ -30,6 +30,7 @@ local M = {}
 ---@field none Color
 ---@field comment Color
 ---@field selected Color
+---@field cursorline { fg: Color, bg: Color, secondary: Color }
 ---@field number_column Color
 ---@field sign_column Color
 ---@field color_column Color
@@ -117,7 +118,7 @@ function M.setup(gb, config)
 
   -- Special groups
 
-  theme.number_column = theme.bg
+  theme.number_column = theme.none
 
   theme.sign_column = theme.bg1
   if config.transparent_background then
@@ -129,6 +130,15 @@ function M.setup(gb, config)
 
   theme.comment = theme.bg3
   theme.selected = theme.yellow
+
+  theme.cursorline = { fg = theme.selected, bg = theme.none, secondary = theme.bg4 }
+  if config.cursorline_style.soft then
+    theme.cursorline.fg = theme.bg4
+    theme.cursorline.secondary = theme.bg2
+  end
+  if config.cursorline_style.contrast_currentline then
+    theme.cursorline.bg = theme.bg1
+  end
 
   -- Syntax Items
   theme.context = theme.purple_accent

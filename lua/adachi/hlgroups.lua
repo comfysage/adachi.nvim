@@ -84,9 +84,9 @@ function M.setup(theme, config)
 
     Normal = { theme.fg0, theme.bg0 },
     -- Screen line that the cursor is
-    CursorLine = { theme.none, theme.bg1 },
+    CursorLine = { theme.none, theme.cursorline.bg },
     -- Line number of CursorLine
-    CursorLineNr = { theme.selected, theme.bg1 },
+    CursorLineNr = { theme.cursorline.fg, theme.cursorline.bg },
     -- Screen column that the cursor is
     CursorColumn = { link = "CursorLine" },
 
@@ -140,7 +140,7 @@ function M.setup(theme, config)
     WarningMsg = { link = "AdachiRedBold" },
 
     -- Line number for :number and :# commands
-    LineNr = { theme.bg4, theme.number_column },
+    LineNr = { theme.cursorline.secondary, theme.number_column },
 
     -- Column where signs are displayed
     SignColumn = { theme.none, theme.sign_column },
@@ -162,7 +162,6 @@ function M.setup(theme, config)
     Comment = { theme.comment, bold = theme.bold.comment, italic = theme.italic.comment },
     Todo = { theme.purple, theme.bg1 },
     Error = { theme.red },
-
 
     -- Generic statement
     Statement = { link = "AdachiRed" },
