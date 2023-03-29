@@ -158,7 +158,7 @@ function M.setup(theme, config)
     -- Language mapping cursor
     lCursor = { link = "Cursor" },
 
-    Special = { theme.orange },
+    Special = { theme.bg4 },
     Comment = { theme.comment, bold = theme.bold.comment, italic = theme.italic.comment },
     Todo = { theme.purple, theme.bg1 },
     Error = { theme.red },
@@ -174,11 +174,11 @@ function M.setup(theme, config)
     -- try, catch, throw
     Exception = { link = "AdachiRed" },
     -- sizeof, "+", "*", etc.
-    Operator = { link = "AdachiOrange" },
+    Operator = { link = "Special" },
     -- Any other keyword
     Keyword = { link = "AdachiRed", bold = theme.bold.keyword, italic = theme.italic.keyword },
 
-    Delimiter = { link = "AdachiOrange" },
+    Delimiter = { link = "Special" },
     MatchParen = { link = "AdachiYellow" },
 
     -- Variable name
