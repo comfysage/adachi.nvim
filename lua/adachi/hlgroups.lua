@@ -214,7 +214,7 @@ function M.setup(theme, config)
     -- Generic type
     Type = { link = "AdachiYellow" },
     -- static, register, volatile, etc
-    StorageClass = { link = "AdachiOrange" },
+    StorageClass = { link = "Keyword" },
     -- struct, union, enum, etc.
     Structure = { link = "AdachiFg3" },
     -- typedef
