@@ -176,7 +176,7 @@ function M.setup(theme, config)
     -- sizeof, "+", "*", etc.
     Operator = { link = "Special" },
     -- Any other keyword
-    Keyword = { link = "AdachiRed", bold = theme.bold.keyword, italic = theme.italic.keyword },
+    Keyword = { theme.red, bold = theme.bold.keyword, italic = theme.italic.keyword },
 
     Delimiter = { link = "Special" },
     MatchParen = { link = "AdachiYellow" },
