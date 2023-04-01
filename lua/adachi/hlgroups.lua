@@ -108,7 +108,7 @@ function M.setup(theme, config)
     NonText = { link = "AdachiBg2" },
     SpecialKey = { link = "AdachiBg2" },
 
-    Visual = { theme.none, theme.bg3 },
+    Visual = { theme.none, theme.bg2 },
     VisualNOS = { link = "Visual" },
 
     Search = { theme.quick_style.search.color, theme.quick_style.search.inverse and theme.bg0 or theme.none, reverse = theme.quick_style.search.inverse },
