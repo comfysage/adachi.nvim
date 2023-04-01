@@ -35,7 +35,7 @@ local M = {}
 ---@field sign_column Color
 ---@field color_column Color
 ---@field vert_split Color
----@field inverse inverseField
+---@field quick_style quickhiField
 ---@field bold specialField
 ---@field italic specialField
 ---@field underline specialField
@@ -43,7 +43,7 @@ local M = {}
 ---@field context specialField
 
 ---@alias specialField { ['general']: boolean, ['comment']: boolean, ['keyword']: boolean }
----@alias inverseField { ['tabline']: boolean, ['signs']: boolean, ['search']: boolean }
+---@alias quickhiField { ['tabline']: QuickHIStyle, ['cursor']: QuickHIStyle, ['search']: QuickHIStyle }
 
 ---@param gb AdachiColors
 ---@param config AdachiConfig
@@ -132,11 +132,11 @@ function M.setup(gb, config)
   theme.selected = theme.yellow
 
   theme.cursorline = { fg = theme.selected, bg = theme.none, secondary = theme.bg4 }
-  if config.cursorline_style.soft then
+  if config.style.cursorline.soft then
     theme.cursorline.fg = theme.bg4
     theme.cursorline.secondary = theme.bg2
   end
-  if config.cursorline_style.contrast_currentline then
+  if config.style.cursorline.contrast_currentline then
     theme.cursorline.bg = theme.bg1
   end
 
@@ -145,9 +145,11 @@ function M.setup(gb, config)
 
   -- Emphasis
 
-  theme.inverse = { tabline = false, signs = false, search = false }
+  theme.quick_style = { tabline = {}, cursor = {}, search = {} }
 
-  theme.inverse = vim.tbl_extend('force', theme.inverse, config.inverse)
+  for name in pairs(theme.quick_style) do
+    theme.quick_style[name] = config.style[name]
+  end
 
   theme.bold = {
     general = false,
@@ -170,7 +172,7 @@ function M.setup(gb, config)
   -- override theme
   for _, m in ipairs({ 'bold', 'italic', 'underline' }) do
     for name in pairs(theme[m]) do
-      theme[m][name] = config[name] and config[name][m] or theme[m][name]
+      theme[m][name] = config.emphasis[name] and config.emphasis[name][m] or theme[m][name]
     end
   end
 
