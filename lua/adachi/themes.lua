@@ -145,10 +145,20 @@ function M.setup(gb, config)
 
   -- Emphasis
 
-  theme.quick_style = { tabline = {}, cursor = {}, search = {} }
+  theme.quick_style = { tabline = {
+    inverse = false, color = 'red',
+  }, cursor = {
+      inverse = false, color = 'yellow',
+    }, search = {
+      inverse = false, color = 'orange',
+    } }
 
   for name in pairs(theme.quick_style) do
-    theme.quick_style[name] = config.style[name]
+    local style = config.style[name] or {}
+    theme.quick_style[name] = {
+      inverse = style.inverse or theme.quick_style[name].boolean,
+      color = _bright[style.color or theme.quick_style[name].color],
+    }
   end
 
   theme.bold = {
