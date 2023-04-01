@@ -66,13 +66,13 @@ function M.setup(theme, config)
     AdachiOrange = { theme.orange },
     AdachiOrangeBold = { theme.orange, theme.none, bold = true },
 
-    AdachiRedSign = { theme.red, theme.sign_column, reverse = theme.inverse.signs },
-    AdachiGreenSign = { theme.green, theme.sign_column, reverse = theme.inverse.signs },
-    AdachiYellowSign = { theme.yellow, theme.sign_column, reverse = theme.inverse.signs },
-    AdachiBlueSign = { theme.blue, theme.sign_column, reverse = theme.inverse.signs },
-    AdachiPurpleSign = { theme.purple, theme.sign_column, reverse = theme.inverse.signs },
-    AdachiAquaSign = { theme.aqua, theme.sign_column, reverse = theme.inverse.signs },
-    AdachiOrangeSign = { theme.orange, theme.sign_column, reverse = theme.inverse.signs },
+    AdachiRedSign = { theme.red, theme.sign_column },
+    AdachiGreenSign = { theme.green, theme.sign_column },
+    AdachiYellowSign = { theme.yellow, theme.sign_column },
+    AdachiBlueSign = { theme.blue, theme.sign_column },
+    AdachiPurpleSign = { theme.purple, theme.sign_column },
+    AdachiAquaSign = { theme.aqua, theme.sign_column },
+    AdachiOrangeSign = { theme.orange, theme.sign_column },
 
     AdachiRedDark = { theme.red, theme.gb.dark['red'] },
     AdachiGreenDark = { theme.green, theme.gb.dark['green'] },
@@ -93,7 +93,7 @@ function M.setup(theme, config)
     -- Tab pages line filler
     TabLineFill = { theme.bg4, theme.bg0 },
     -- Active tab page label
-    TabLineSel = { theme.inverse.tabline and theme.bg0 or theme.red, theme.inverse.tabline and theme.red or theme.bg0 },
+    TabLineSel = { theme.quick_style.tabline.inverse and theme.bg0 or theme.quick_style.tabline.color, theme.quick_style.tabline.inverse and theme.quick_style.tabline.color or theme.bg0 },
     -- Not active tab page label
     TabLine = { link = "TabLineFill" },
 
@@ -111,8 +111,8 @@ function M.setup(theme, config)
     Visual = { theme.none, theme.bg3 },
     VisualNOS = { link = "Visual" },
 
-    Search = { theme.selected, theme.inverse.search and theme.bg0 or theme.none, reverse = theme.inverse.search },
-    IncSearch = { theme.orange, theme.inverse.search and theme.bg0 or theme.none, reverse = theme.inverse.search },
+    Search = { theme.quick_style.search.color, theme.quick_style.search.inverse and theme.bg0 or theme.none, reverse = theme.quick_style.search.inverse },
+    IncSearch = { theme.quick_style.search.color, theme.quick_style.search.inverse and theme.bg0 or theme.none, reverse = theme.quick_style.search.inverse },
 
     Underlined = { theme.blue, theme.none, underline = true },
     StatusLine = { theme.fg1, theme.bg1 },
@@ -150,7 +150,7 @@ function M.setup(theme, config)
     -- Column where folds are displayed
     FoldColumn = { theme.comment, theme.bg1 },
     -- Character under cursor
-    Cursor = { theme.none, theme.selected, reverse = not theme.inverse.search },
+    Cursor = { theme.none, theme.quick_style.cursor.color, reverse = not theme.quick_style.cursor.inverse },
     -- Visual mode cursor, selection
     vCursor = { link = "Cursor" },
     -- Input moder cursor
@@ -279,15 +279,15 @@ function M.setup(theme, config)
 
     -- Completion Menu
     Pmenu = { theme.fg1, theme.bg2 },
-    PmenuSel = { theme.blue, theme.bg2, reverse = theme.inverse.search },
+    PmenuSel = { theme.blue, theme.bg2, reverse = theme.quick_style.search.inverse },
     PmenuSbar = { theme.none, theme.bg2 },
     PmenuThumb = { theme.none, theme.bg4 },
 
     -- Diffs
-    DiffDelete = { theme.red, theme.bg0, reverse = theme.inverse.signs },
-    DiffAdd = { theme.green, theme.bg0, reverse = theme.inverse.signs },
-    DiffChange = { theme.aqua, theme.bg0, reverse = theme.inverse.signs },
-    DiffText = { theme.yellow, theme.bg0, reverse = theme.inverse.signs },
+    DiffDelete = { theme.red, theme.bg0 },
+    DiffAdd = { theme.green, theme.bg0 },
+    DiffChange = { theme.aqua, theme.bg0 },
+    DiffText = { theme.yellow, theme.bg0 },
 
     -- Spell
     SpellCap   = { theme.green },
