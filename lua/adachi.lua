@@ -16,6 +16,7 @@ local adachi = {}
 ---@field general EmphasisGroup
 ---@field comment EmphasisGroup
 ---@field keyword EmphasisGroup
+---@field type EmphasisGroup
 
 ---@class ConfigStyle
 ---@field cursorline { soft: boolean, contrast_currentline: boolean }
@@ -35,6 +36,7 @@ adachi.default_config = {
         general = { },
         comment = { },
         keyword = { },
+        type    = { },
     },
     transparent_background = false,
     style = {
