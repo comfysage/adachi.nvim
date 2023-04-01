@@ -5,14 +5,17 @@ local adachi = {}
 ---@field override_terminal boolean
 ---@field contrast_dark 'hard'|'medium'|'soft'
 ---@field contrast_light 'hard'|'medium'|'soft'
----@field general EmphasisGroup
----@field comment EmphasisGroup
----@field keyword EmphasisGroup
 ---@field transparent_background boolean
 ---@field cursorline_style { soft: boolean, contrast_currentline: boolean }
+---@field emphasis ConfigEmphasis
 ---@field inverse inverseField
 ---@field overrides HLGroups
 ---@field plugins string[]|boolean
+
+---@class ConfigEmphasis
+---@field general EmphasisGroup
+---@field comment EmphasisGroup
+---@field keyword EmphasisGroup
 
 ---@class EmphasisGroup
 ---@field bold boolean
@@ -25,9 +28,11 @@ adachi.default_config = {
     override_terminal = true,
     contrast_dark = 'medium',
     contrast_light = 'medium',
-    general = { },
-    comment = { },
-    keyword = { },
+    emphasis = {
+        general = { },
+        comment = { },
+        keyword = { },
+    },
     transparent_background = false,
     cursorline_style = { soft = false, contrast_currentline = false },
     inverse = { },
