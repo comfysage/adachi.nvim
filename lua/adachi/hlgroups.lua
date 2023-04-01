@@ -205,11 +205,11 @@ function M.setup(theme, config)
     String = { theme.green },
 
     -- Boolean constant: TRUE, false
-    Boolean = { link = "AdachiPurple" },
+    Boolean = { link = "Constant" },
     -- Number constant: 234, 0xff
-    Number = { link = "AdachiPurple" },
+    Number = { link = "Constant" },
     -- Floating point constant: 2.3e10
-    Float = { link = "AdachiPurple" },
+    Float = { link = "Constant" },
 
     -- Generic type
     Type = { link = "AdachiYellow" },
@@ -234,15 +234,15 @@ function M.setup(theme, config)
     TSCharacter          = { link = "Character" },
     TSComment            = { link = "Comment" },
     TSConditional        = { link = "Conditional" },
-    TSConstBuiltin       = { link = "AdachiBlue" },
-    TSConstMacro         = { link = "AdachiBlue" },
+    TSConstBuiltin       = { link = "Constant" },
+    TSConstMacro         = { link = "Constant" },
     TSConstant           = { link = "Constant" },
     TSConstructor        = { link = "AdachiGreen" },
     TSException          = { link = "Exception" },
     TSField              = { link = "AdachiOrange" },
     TSFloat              = { link = "Float" },
-    TSFuncBuiltin        = { link = "AdachiGreen" },
-    TSFuncMacro          = { link = "AdachiGreen" },
+    TSFuncBuiltin        = { link = "Constant" },
+    TSFuncMacro          = { link = "Constant" },
     TSFunction           = { link = "Function" },
     TSInclude            = { link = "Include" },
     TSKeyword            = { link = "Keyword" },
@@ -250,7 +250,7 @@ function M.setup(theme, config)
     TSKeywordOperator    = { link = "AdachiOrange" },
     TSLabel              = { link = "Label" },
     TSMethod             = { link = "AdachiGreen" },
-    TSNamespace          = { link = "AdachiFg4" },
+    TSNamespace          = { link = "Constant" },
     TSNone               = { link = "Normal" },
     TSNumber             = { link = "Number" },
     TSOperator           = { link = "Operator" },
@@ -275,7 +275,7 @@ function M.setup(theme, config)
     TSTypeBuiltin        = { link = "Type" },
     TSURI                = { link = "markdownUrl" },
     TSVariable           = { link = "AdachiFg1" },
-    TSVariableBuiltin    = { link = "AdachiBlue" },
+    TSVariableBuiltin    = { link = "Constant" },
 
     -- Completion Menu
     Pmenu = { theme.fg1, theme.bg2 },
