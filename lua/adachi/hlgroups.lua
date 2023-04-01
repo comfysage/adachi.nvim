@@ -254,7 +254,7 @@ function M.setup(theme, config)
     TSNone               = { link = "Normal" },
     TSNumber             = { link = "Number" },
     TSOperator           = { link = "Operator" },
-    TSParameter          = { link = "AdachiFg4" },
+    TSParameter          = { link = "Identifier" },
     TSParameterReference = { link = "AdachiFg2" },
     TSProperty           = { link = "AdachiFg3" },
     TSPunctBracket       = { link = "Delimiter" },
@@ -274,7 +274,7 @@ function M.setup(theme, config)
     TSType               = { link = "Type" },
     TSTypeBuiltin        = { link = "Type" },
     TSURI                = { link = "markdownUrl" },
-    TSVariable           = { link = "AdachiFg1" },
+    TSVariable           = { link = "Identifier" },
     TSVariableBuiltin    = { link = "Constant" },
 
     -- Completion Menu
