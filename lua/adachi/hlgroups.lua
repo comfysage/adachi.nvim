@@ -164,15 +164,15 @@ function M.setup(theme, config)
     Error = { theme.red },
 
     -- Generic statement
-    Statement = { link = "AdachiRed" },
+    Statement = { link = "Keyword" },
     -- if, then, else, endif, swicth, etc.
-    Conditional = { link = "AdachiRed" },
+    Conditional = { link = "Keyword" },
     -- for, do, while, etc.
-    Repeat = { link = "AdachiRed" },
+    Repeat = { link = "Keyword" },
     -- case, default, etc.
-    Label = { link = "AdachiRed" },
+    Label = { link = "Keyword" },
     -- try, catch, throw
-    Exception = { link = "AdachiRed" },
+    Exception = { link = "Keyword" },
     -- sizeof, "+", "*", etc.
     Operator = { link = "Special" },
     -- Any other keyword
