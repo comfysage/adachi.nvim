@@ -8,7 +8,6 @@ local adachi = {}
 ---@field transparent_background boolean
 ---@field emphasis ConfigEmphasis
 ---@field style ConfigStyle
----@field inverse inverseField
 ---@field overrides HLGroups
 ---@field plugins string[]|boolean
 
@@ -20,11 +19,18 @@ local adachi = {}
 
 ---@class ConfigStyle
 ---@field cursorline { soft: boolean, contrast_currentline: boolean }
+---@field tabline QuickHIStyle
+---@field cursor QuickHIStyle
+---@field search QuickHIStyle
 
 ---@class EmphasisGroup
 ---@field bold boolean
 ---@field italic boolean
 ---@field underline boolean
+
+---@class QuickHIStyle
+---@field inverse boolean
+---@field color 'red'|'green'|'yellow'|'purple'|'orange'|'blue'|'aqua'
 
 ---@type AdachiConfig
 adachi.default_config = {
@@ -41,6 +47,9 @@ adachi.default_config = {
     transparent_background = false,
     style = {
         cursorline = { soft = false, contrast_currentline = false },
+        tabline = {},
+        cursor = {},
+        search = {},
     },
     inverse = { },
     overrides = { },
