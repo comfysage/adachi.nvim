@@ -246,7 +246,7 @@ function M.setup(theme, config)
     TSFunction           = { link = "Function" },
     TSInclude            = { link = "Include" },
     TSKeyword            = { link = "Keyword" },
-    TSKeywordFunction    = { theme.context },
+    TSKeywordFunction    = { link = "Keyword" },
     TSKeywordOperator    = { link = "AdachiOrange" },
     TSLabel              = { link = "Label" },
     TSMethod             = { link = "AdachiGreen" },
