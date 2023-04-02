@@ -1,25 +1,5 @@
 local M = {}
 
----@param theme AdachiTheme
-local function setup_terminal_colors(theme)
-  vim.g.terminal_color_0  = theme.bg1[1]
-  vim.g.terminal_color_8  = theme.bg0[1]
-  vim.g.terminal_color_1  = theme.red[1]
-  vim.g.terminal_color_9  = theme.gb.neutral['red'][1]
-  vim.g.terminal_color_2 = theme.green[1]
-  vim.g.terminal_color_10  = theme.gb.neutral['green'][1]
-  vim.g.terminal_color_3 = theme.yellow[1]
-  vim.g.terminal_color_11  = theme.gb.neutral['yellow'][1]
-  vim.g.terminal_color_4 = theme.blue[1]
-  vim.g.terminal_color_12  = theme.gb.neutral['blue'][1]
-  vim.g.terminal_color_5 = theme.purple[1]
-  vim.g.terminal_color_13  = theme.gb.neutral['purple'][1]
-  vim.g.terminal_color_6 = theme.aqua[1]
-  vim.g.terminal_color_14  = theme.gb.neutral['aqua'][1]
-  vim.g.terminal_color_7 = theme.bg3[1]
-  vim.g.terminal_color_15  = theme.bg4[1]
-end
-
 ---@class HLGroup
 ---@field link? string
 ---@field ['1'] Color
@@ -184,7 +164,7 @@ function M.setup(theme, config)
     -- Variable name
     Identifier = { link = "AdachiFg0" },
     -- Function name
-    Function = { link = "AdachiBlue" },
+    Function = { theme.context },
 
     -- Generic preprocessor
     PreProc = { theme.aqua },
@@ -198,11 +178,11 @@ function M.setup(theme, config)
     PreCondit = { theme.aqua },
 
     -- Generic constant
-    Constant = { link = "AdachiPurple" },
+    Constant = { theme.constant },
     -- Character constant: 'c', '/n'
     Character = { link = "AdachiAqua" },
     -- String constant: "this is a string"
-    String = { theme.green },
+    String = { link = "AdachiGreen" },
 
     -- Boolean constant: TRUE, false
     Boolean = { link = "Constant" },
@@ -212,13 +192,13 @@ function M.setup(theme, config)
     Float = { link = "Constant" },
 
     -- Generic type
-    Type = { link = "AdachiYellow" },
+    Type = { theme.type },
     -- static, register, volatile, etc
     StorageClass = { link = "Keyword" },
     -- struct, union, enum, etc.
     Structure = { link = "Type" },
     -- typedef
-    Typedef = { link = "AdachiYellow" },
+    Typedef = { link = "Type" },
 
     -- Treesitter
     TSStrong    = { theme.none, theme.none, bold = theme.bold.general },
@@ -239,7 +219,7 @@ function M.setup(theme, config)
     TSConstant           = { link = "Constant" },
     TSConstructor        = { link = "AdachiGreen" },
     TSException          = { link = "Exception" },
-    TSField              = { link = "AdachiOrange" },
+    TSField              = { theme.object },
     TSFloat              = { link = "Float" },
     TSFuncBuiltin        = { link = "Constant" },
     TSFuncMacro          = { link = "Constant" },
@@ -255,9 +235,9 @@ function M.setup(theme, config)
     TSNumber             = { link = "Number" },
     TSOperator           = { link = "Operator" },
     TSParameter          = { link = "Identifier" },
-    TSParameterReference = { link = "AdachiFg2" },
-    TSProperty           = { link = "AdachiFg3" },
-    TSPunctBracket       = { link = "Delimiter" },
+    TSParameterReference = { link = "TSParameter" },
+    TSProperty           = { theme.object },
+    TSPunctBracket       = { theme.bg4 },
     TSPunctDelimiter     = { link = "Delimiter" },
     TSPunctSpecial       = { link = "Special" },
     TSRepeat             = { link = "Repeat" },
@@ -400,7 +380,7 @@ function M.setup(theme, config)
     hlGroups['@variable']              = { link = "TSVariable" }
     hlGroups['@variable.builtin']      = { link = "TSVariableBuiltin" }
 
-    local captures = require 'adachi.treesitter'.captures(theme)
+    local captures = require 'adachi.hl.treesitter'.captures(theme)
     for l_name, higroups in pairs(captures) do
       for capture_name, higroup in pairs(higroups) do
         hlGroups[capture_name .. '.' .. l_name] = higroup
@@ -409,7 +389,7 @@ function M.setup(theme, config)
   end
 
   if config.plugins then
-    local plugin_groups = require 'adachi.plugins'.plugins
+    local plugin_groups = require 'adachi.hl.plugins'.plugins
     if type(config.plugins) == "boolean" then
       for _, plugin_hl in pairs(plugin_groups) do
         hlGroups = vim.tbl_deep_extend('force', hlGroups, plugin_hl or {})
@@ -422,13 +402,13 @@ function M.setup(theme, config)
     end
   end
 
-  local lang_higroups = require 'adachi.hl'.higroups(theme)
+  local lang_higroups = require 'adachi.hl.groups'.higroups(theme)
   for l_name in pairs(lang_higroups) do
     hlGroups = vim.tbl_deep_extend('force', hlGroups, lang_higroups[l_name])
   end
 
   if config.override_terminal then
-    setup_terminal_colors(theme)
+    require 'adachi.hl.terminal'(theme)
   end
 
   for hl, override in pairs(config.overrides or {}) do
