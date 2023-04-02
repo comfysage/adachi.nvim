@@ -158,7 +158,7 @@ function M.setup(theme, config)
     -- Language mapping cursor
     lCursor = { link = "Cursor" },
 
-    Special = { theme.bg4 },
+    Special = { theme.special },
     Comment = { theme.comment, bold = theme.bold.comment, italic = theme.italic.comment },
     Todo = { theme.purple, theme.bg1 },
     Error = { theme.red },

@@ -40,7 +40,7 @@ local M = {}
 ---@field italic specialField
 ---@field underline specialField
 --
----@field context specialField
+---@field special Color
 
 ---@alias specialField { ['general']: boolean, ['comment']: boolean, ['keyword']: boolean }
 ---@alias quickhiField { ['tabline']: QuickHIStyle, ['cursor']: QuickHIStyle, ['search']: QuickHIStyle }
@@ -142,6 +142,8 @@ function M.setup(gb, config)
 
   -- Syntax Items
   theme.context = theme.purple_accent
+  -- special, operators
+  theme.special = theme.orange
 
   -- Emphasis
 
