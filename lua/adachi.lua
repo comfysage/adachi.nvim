@@ -98,7 +98,7 @@ function adachi.load()
     end
 
     local theme = require 'adachi.colors'.setup()
-    local hlgroups = require 'adachi.hlgroups'.setup(theme)
+    local hlgroups = require 'adachi.hl.init'.setup(theme)
 
     set_highlights(hlgroups)
 end
