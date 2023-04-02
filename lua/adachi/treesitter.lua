@@ -7,7 +7,6 @@ local M = {}
 function M.captures(theme)
   return {
     ['lua'] = {
-      ['@keyword.function'] = { link = 'Structure' },
       ['@constructor'] = { theme.bg4 },
     },
     ['c'] = {
