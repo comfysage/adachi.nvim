@@ -10,6 +10,12 @@ function M.captures(theme)
       ['@keyword.function'] = { link = 'Structure' },
       ['@constructor'] = { theme.bg4 },
     },
+    ['c'] = {
+      ['@include'] = { theme.aqua },
+    },
+    ['cpp'] = {
+      ['@include'] = { theme.aqua },
+    },
   }
 end
 
