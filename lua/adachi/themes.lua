@@ -39,8 +39,8 @@ local M = {}
 ---@field bold specialField
 ---@field italic specialField
 ---@field underline specialField
---
 ---@field special Color
+---@field syntax AdachiSyntax
 
 ---@alias specialField { ['general']: boolean, ['comment']: boolean, ['keyword']: boolean }
 ---@alias quickhiField { ['tabline']: QuickHIStyle, ['cursor']: QuickHIStyle, ['search']: QuickHIStyle }
@@ -141,7 +141,8 @@ function M.setup(gb, config)
   end
 
   -- Syntax Items
-  theme.context = theme.purple_accent
+  theme.syntax = require 'adachi.syntax'(theme)
+
   -- special, operators
   theme.special = theme.orange
 
