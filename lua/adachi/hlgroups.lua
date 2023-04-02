@@ -395,6 +395,7 @@ function M.setup(theme, config)
     hlGroups['@math']                  = { link = "TSMath" }
     hlGroups['@type']                  = { link = "TSType" }
     hlGroups['@type.builtin']          = { link = "TSTypeBuiltin" }
+    hlGroups['@type.qualifier']        = { link = "TSKeyword" }
     hlGroups['@uri']                   = { link = "TSURI" }
     hlGroups['@variable']              = { link = "TSVariable" }
     hlGroups['@variable.builtin']      = { link = "TSVariableBuiltin" }
