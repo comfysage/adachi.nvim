@@ -164,7 +164,7 @@ function M.setup(theme, config)
     -- Variable name
     Identifier = { link = "AdachiFg0" },
     -- Function name
-    Function = { theme.context },
+    Function = { theme.syntax.context },
 
     -- Generic preprocessor
     PreProc = { theme.aqua },
@@ -178,7 +178,7 @@ function M.setup(theme, config)
     PreCondit = { theme.aqua },
 
     -- Generic constant
-    Constant = { theme.constant },
+    Constant = { theme.syntax.constant },
     -- Character constant: 'c', '/n'
     Character = { link = "AdachiAqua" },
     -- String constant: "this is a string"
@@ -192,7 +192,7 @@ function M.setup(theme, config)
     Float = { link = "Constant" },
 
     -- Generic type
-    Type = { theme.type },
+    Type = { theme.syntax.type },
     -- static, register, volatile, etc
     StorageClass = { link = "Keyword" },
     -- struct, union, enum, etc.
@@ -219,7 +219,7 @@ function M.setup(theme, config)
     TSConstant           = { link = "Constant" },
     TSConstructor        = { link = "AdachiGreen" },
     TSException          = { link = "Exception" },
-    TSField              = { theme.object },
+    TSField              = { theme.syntax.object },
     TSFloat              = { link = "Float" },
     TSFuncBuiltin        = { link = "Constant" },
     TSFuncMacro          = { link = "Constant" },
@@ -236,7 +236,7 @@ function M.setup(theme, config)
     TSOperator           = { link = "Operator" },
     TSParameter          = { link = "Identifier" },
     TSParameterReference = { link = "TSParameter" },
-    TSProperty           = { theme.object },
+    TSProperty           = { theme.syntax.object },
     TSPunctBracket       = { theme.bg4 },
     TSPunctDelimiter     = { link = "Delimiter" },
     TSPunctSpecial       = { link = "Special" },
