@@ -187,15 +187,15 @@ function M.setup(theme, config)
     Function = { link = "AdachiBlue" },
 
     -- Generic preprocessor
-    PreProc = { link = "AdachiAqua" },
+    PreProc = { theme.aqua },
     -- Preprocessor #include
-    Include = { link = "AdachiAqua" },
+    Include = { theme.red },
     -- Preprocessor #define
-    Define = { link = "AdachiAqua" },
+    Define = { theme.aqua },
     -- Same as Define
-    Macro = { link = "AdachiAqua" },
+    Macro = { theme.aqua },
     -- Preprocessor #if, #else, #endif, etc.
-    PreCondit = { link = "AdachiAqua" },
+    PreCondit = { theme.aqua },
 
     -- Generic constant
     Constant = { link = "AdachiPurple" },
