@@ -64,7 +64,7 @@ _G.adachi_config = _G.adachi_config or adachi.default_config
 --- update global configuration with user settings
 ---@param config AdachiConfig? user configuration
 function adachi.setup(config)
-    _G.adachi_config = vim.tbl_extend("force", _G.adachi_config, config or {})
+    _G.adachi_config = vim.tbl_deep_extend("force", _G.adachi_config, config or {})
 end
 
 ---@param hlgroups HLGroups
