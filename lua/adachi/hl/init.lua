@@ -158,7 +158,7 @@ function M.setup(theme, config)
     -- Any other keyword
     Keyword = { theme.red, bold = theme.bold.keyword, italic = theme.italic.keyword },
 
-    Delimiter = { link = "Special" },
+    Delimiter = { link = "AdachiFg0" },
     MatchParen = { link = "AdachiYellow" },
 
     -- Variable name
