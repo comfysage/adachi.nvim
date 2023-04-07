@@ -12,7 +12,7 @@ return function(theme)
   local syntax = {}
 
   -- functions
-  syntax.context = theme.fg2
+  syntax.context = theme.blue
   -- constants, builtins, namespaces
   syntax.constant = theme.purple
   -- keywords, attributes
