@@ -24,12 +24,22 @@ require 'adachi'.setup {
     override_terminal = true,
     contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
     contrast_light = 'medium', -- 'hard'|'medium'|'soft'
-    comment = { italic = false, bold = false }, -- use { italic = true } for italic comments
-    keyword = { italic = false, bold = false },
+    emphasis = {
+        general = { },
+        comment = { },
+        keyword = { },
+        type    = { },
+    },
     transparent_background = false,
-    inverse = { ['tabline'] = false, ['search'] = false, ['signs'] = false },
+    style = {
+        cursorline = { soft = false, contrast_currentline = false },
+        tabline = {}, -- {inverse: boolean, color: 'red'}
+        cursor = {},
+        search = {},
+        signs = { contrast = false }, -- use `true` for a contrasting sign_column
+    },
     overrides = { }, -- add custom overrides
-    plugins = { 'Telescope' }, -- add highlighting for supported plugins
+    plugins = true, -- add highlighting for supported plugins
 }
 ```
 
@@ -39,7 +49,9 @@ Overrides can take all options passed to `vim.api.nvim_set_hl()`.
 
 ```lua
 require 'adachi'.setup {
-    'Normal' = { '#fddce3', '#1d2021' } -- { 'fg', 'bg', bold = bool, italic = bool, ... }
+    overrides = {
+        'Normal' = { '#fddce3', '#1d2021' } -- { 'fg', 'bg', bold = bool, italic = bool, ... }
+    },
 }
 ```
 
