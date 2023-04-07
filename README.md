@@ -1,6 +1,8 @@
-Adachi is a colorscheme based on the [gruvboxed colorscheme](https://github.com/crispybaccoon/gruvboxed) and the [Nord colorscheme](https://www.nordtheme.com).
+Adachi is a colorscheme based on the [everforest colorscheme](https://github.com/sainnhe/everforest) and the [aquarium colorscheme](https://github.com/FrenzyExists/aquarium-vim).
+Adachi is inspired by the [gruvboxed colorscheme](https://github.com/crispybaccoon/gruvboxed) and the [Nord colorscheme](https://www.nordtheme.com).
 
-Adachi was designed as a cozy theme with pastel colors. Adachi was inspired by the colorfull images of [Adachi](https://en.wikipedia.org/wiki/Adachi,_Tokyo). The main focus developing adachi is to keep colors easily distinguishable, contrast low and pleasant for the eyes.
+Adachi was designed as a cozy theme with pastel colors. Adachi was inspired by the colorfull images of [Adachi](https://en.wikipedia.org/wiki/Adachi,_Tokyo).
+The main focus developing adachi is to keep colors easily distinguishable and pleasant for the eyes.
 
 ## Installation
 
