@@ -229,7 +229,7 @@ function M.setup(theme, config)
     TSKeywordFunction    = { link = "Keyword" },
     TSKeywordOperator    = { link = "AdachiOrange" },
     TSLabel              = { link = "Label" },
-    TSMethod             = { link = "AdachiGreen" },
+    TSMethod             = { theme.syntax.context },
     TSNamespace          = { link = "Constant" },
     TSNone               = { link = "Normal" },
     TSNumber             = { link = "Number" },
