@@ -22,6 +22,7 @@ local adachi = {}
 ---@field tabline QuickHIStyle
 ---@field cursor QuickHIStyle
 ---@field search QuickHIStyle
+---@field signs { contrast: boolean }
 
 ---@class EmphasisGroup
 ---@field bold boolean
@@ -50,6 +51,7 @@ adachi.default_config = {
         tabline = {},
         cursor = {},
         search = {},
+        signs = {},
     },
     inverse = { },
     overrides = { },

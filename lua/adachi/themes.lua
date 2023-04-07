@@ -121,8 +121,8 @@ function M.setup(gb, config)
   theme.number_column = theme.none
 
   theme.sign_column = theme.bg1
-  if config.transparent_background then
-    theme.sign_column = { theme.none[1], 0 }
+  if config.transparent_background or not config.style.signs.contrast then
+    theme.sign_column = theme.none
   end
 
   theme.color_column = theme.bg1
